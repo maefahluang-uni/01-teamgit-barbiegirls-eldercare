@@ -9,7 +9,7 @@ public class Counter {
 
 	// method increments _ctr
 	public void increment() {
-		_ctr--; // faulty increment
+		_ctr++; // faulty increment
 	}
 
 	// method decrements _ctr
@@ -30,7 +30,7 @@ public class Counter {
 
 	// TODO: dev1- method for increment to closest even number
 	public void incrementToEven() {
-		_ctr = -99;
+		_ctr = +99;
 	}
 
 	// TODO: dev1- method for decrement to closest even number
