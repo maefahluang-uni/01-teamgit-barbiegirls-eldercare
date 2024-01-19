@@ -40,12 +40,30 @@ public class Counter {
 
 	// TODO: dev2- method for increment to closest prime number
 	public void incrementToPrime() {
-		_ctr = -99;
+		increment();
+		while (!isPrime(_ctr)) {
+			_ctr++;
+		}
 	}
+	
 
 	// TODO: dev2- method for decrement to closest prime number
 	public void decrementToPrime() {
-		_ctr = -99;
+		decrement();
+		while (!isPrime(_ctr)) {
+			_ctr--;
+		}
+	}
+	private boolean isPrime(int n) {
+		if (n <= 1) {
+			return false;
+		}
+		for (int i = 2; i <= Math.sqrt(n); i++) {
+			if (n % i == 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	// TODO: dev3- count the frequency of word in sentence,
